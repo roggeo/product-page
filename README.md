@@ -4,6 +4,7 @@
 
 - Install [Node.js](https://nodejs.org/en/)
 - Install [Yarn](https://classic.yarnpkg.com/en/docs/install)
+- Install [Mysql](https://dev.mysql.com/downloads/mysql/)
 
 ## Install
 
@@ -22,12 +23,16 @@ yarn install
 - Run at `http://localhost:3000`
 
 ```
+yarn run db db:create
+yarn run db db:migrate
 yarn run dev
 ```
 
 or
 
 ```
+yarn run db db:create
+yarn run db db:migrate
 yarn build
 yarn start
 ```
@@ -37,4 +42,24 @@ yarn start
 - Run tests
 ```
 yarn test
+```
+
+## Database Migration
+
+- Generate model for migration
+
+```
+yarn run db model:generate --name <NameModel> --attributes <NAME:TYPE,OTHER:TYPE>
+```
+
+- Generate just a single migration
+
+```
+yarn run db migration:generate --name 0000-fix-dbcharsert
+```
+
+- Run migration (create tables on database)
+
+```
+yarn run db db:migrate
 ```

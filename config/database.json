@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "mysql",
+    "database": "productpage",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "mysql",
+    "database": "productpage_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "productpage_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
